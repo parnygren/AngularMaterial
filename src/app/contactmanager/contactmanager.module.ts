@@ -12,6 +12,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NotesComponent } from './components/notes/notes.component';
 
 const routes: Routes = [
   { path: '', component: ContactmanagerAppComponent,
@@ -38,7 +39,8 @@ const routes: Routes = [
     ContactmanagerAppComponent,
     ToolbarComponent,
     MainContentComponent,
-    SidenavComponent
+    SidenavComponent,
+    NotesComponent
   ]
 })
 export class ContactmanagerModule {}
