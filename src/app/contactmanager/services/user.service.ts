@@ -24,7 +24,7 @@ export class UserService {
   }
 
   userById(id: number) {
-    return this.dataStore.users.find(user => user.id == id);
+    return this.dataStore.users.find(user => user.id === id);
   }
 
   loadAll() {
