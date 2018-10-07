@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewChild, AfterViewInit } from '@angular/core';
 
-import { MatTableDataSource, MatPaginator } from '@angular/material';
+import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
 
 import { Note } from '../../models/note';
 
@@ -19,9 +19,11 @@ export class NotesComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource<Note>(this.notes);
+    this.dataSource.sort = this.sort;
   }
 
   ngAfterViewInit() {
